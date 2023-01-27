@@ -1,0 +1,434 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*Remove this rule on your HTML elements as you start to fill them with content*/
+
+.box-color {
+	color: #fff;
+	background: #000;
+	text-align: center;
+	margin: 0;
+}
+
+/*basic reset*/
+
+/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+
+div,p,body,header,footer,section,article,nav { 
+	margin: 0; 
+	padding: 0; 
+}	
+
+img { 
+	border: none; /*Remove border if image is a link*/
+	margin: 0; 
+	padding: 0; 
+}
+
+/*html selectors*/
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+/* Remove underlines from links */
+
+a {
+	text-decoration: none;
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden {
+	display: none;
+}
+
+
+/*Common page elements  */
+
+/*This is essentially a box that we place the whole site in.  
+We center the box using margin 0 auto and give it a fixed width of 1920px.
+1920px would fit a large monitor or tv. Sizes will vary depending on the projects
+you work on and the intended audience */
+
+#container {
+	margin: 0 auto;
+	width: 1920px;
+}
+
+/* this is our grid based off of our XD file */
+.grid-con {
+	display: grid;
+	grid-template-columns: repeat(12, 122px);
+	grid-column-gap: 16px;
+	padding-left: 140px;
+	padding-right: 140px;
+}
+
+#header-con-icon {
+	background-color: #ddd;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#header-box1-media {
+	grid-column: 1/3;
+	/* Remove as content will dictate height */
+	height: 80px;
+}
+
+#header-box2-cart {
+	grid-column: 11/-1;
+	/* Remove as content will dictate height */
+	height: 80px;
+}
+
+#header-con {
+	background-color: #ddd;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+
+
+#main-nav {
+	grid-column: 2/6;
+	/* Remove as content will dictate height */
+	height: 80px;
+}
+
+#header-logo {
+	grid-column: 6/8;
+	/* Remove as content will dictate height */
+	height: 80px;
+}
+
+#main-nav2 {
+	grid-column: 8/-1;
+	/* Remove as content will dictate height */
+	height: 80px;
+}
+
+/* Specific to index page desktop  */
+
+
+#gallery-hero-con {
+	background-color: #aaaaaa;
+	background: url("https://via.placeholder.com/1920x580");
+	height: 805px;
+}
+
+#gallery-gift {
+	grid-column: 1/5;
+	/* Remove as content will dictate height */
+	height: 511px;
+	width: 611px;
+	margin-top: 100px;
+	opacity: 70%;
+}
+
+#gallery-controls {
+	/* margin-top: 200px; */
+	grid-column: 6/8;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.dot {
+	background-color: #dddddd;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	margin: 5px;
+	/* align-self: flex-end; */
+  }
+
+
+/* container below */
+
+
+#brew-products {
+	/* margin-top: 100px;
+	margin-bottom: 100px; */
+	background-color: #080808;
+	height: 496px;
+}
+
+#brew-products h2 {
+	grid-column: 1/-1;
+	text-align: center;
+}
+
+#brew-product1 {
+	grid-column: 1/5;
+	/* Remove as content will dictate height */
+	height: 496px;
+	margin-left: -50px;
+}
+
+
+
+#col-brew1 {
+	grid-column: 1/5;
+	background-color: rgb(255, 255, 255);
+	height: 248px;
+}
+
+#col-brew2 {
+	grid-column: 5/9;
+	background-color: #DDDDDD;
+	height: 248px;
+}
+
+#col-brew3 {
+	grid-column: 1/5;
+	background-color: #DDDDDD;
+	height: 248px;
+}
+
+#col-brew4 {
+	grid-column: 5/9;
+	background-color: rgb(255, 255, 255);
+	height: 248px;
+}
+
+.brew-product-box {
+	background-color: #ddd;
+}
+
+#about-con {
+	background-color: #aaaaaa;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#about-title {
+	text-align: center;
+}
+
+
+
+#about-img {
+	grid-column: 2/6;
+	/* Remove as content will dictate height */
+	height: 379px;
+	width: 556px;
+}
+
+#about-text {
+	grid-column: 9/-1;
+	/* Remove as content will dictate height */
+	height: 379px;
+	background-color: #ddd;
+	text-align: center;
+}
+
+#products {
+	background-color: #8f8c8c;
+	height: 900px;
+}
+
+#products h2 {
+	grid-column: 1/-1;
+	text-align: center;
+	
+}
+
+#product1 {
+	grid-column: 1/5;
+	/* Remove as content will dictate height */
+	height: 694px;
+}
+
+#product2 {
+	grid-column: 5/9;
+	/* Remove as content will dictate height */
+	height: 694px;
+}
+
+#product3 {
+	grid-column: 9/-1;
+	/* Remove as content will dictate height */
+	height: 694px;
+}
+
+.product-box {
+	background-color: #ddd;
+}
+
+#blog {
+	background-color: #aaaaaa;
+	height: 900px;
+}
+
+#blog h2 {
+	grid-column: 1/-1;
+	text-align: center;
+	
+}
+
+#blog1 {
+	grid-column: 1/5;
+	/* Remove as content will dictate height */
+	height: 694px;
+}
+
+#blog2 {
+	grid-column: 5/9;
+	/* Remove as content will dictate height */
+	height: 694px;
+}
+
+#blog3 {
+	grid-column: 9/-1;
+	/* Remove as content will dictate height */
+	height: 694px;
+}
+
+.blog-box {
+	background-color: #ddd;
+}
+
+#award-con {
+	background-color: #8c8c8c;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	height: 422.51px;
+	display: flex;
+}
+
+#award-title {
+	text-align: center;
+}
+
+
+
+#award-col1 {
+	grid-column: 1/2;
+	/* Remove as content will dictate height */
+	height: 400px;
+	width: 361px;
+	align-self: center;
+}
+
+#award-col2 {
+	grid-column: 4/5;
+	/* Remove as content will dictate height */
+	height: 400px;
+	width: 361px;
+	align-self: center;
+}
+
+#award-col3 {
+	grid-column: 7/8;
+	/* Remove as content will dictate height */
+	height: 400px;
+	width: 361px;
+	align-self: center;
+}
+
+#award-col4 {
+	grid-column: 10/11;
+	/* Remove as content will dictate height */
+	height: 400px;
+	width: 361px;
+	align-self: center;
+}
+
+
+
+#media {
+	background-color: rgb(255, 255, 255);
+}
+
+#map {
+	grid-column: 1/6;
+	/* Remove as content will dictate height */
+	height: 700px;
+}
+
+#video {
+	grid-column: 6/-1;
+	/* Remove as content will dictate height */
+	height: 700px;
+}
+
+/*Common page elements  */
+
+#footer-con {
+	background-color: #aaaaaa;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+#footer-logo {
+	grid-column: 6/8;
+	height: 80px;
+	margin-bottom: 70px;
+}
+
+#footer-location {
+	grid-column: 1/4;
+	/* Remove as content will dictate height */
+	height: 400px;
+}
+
+#footer-useful-link {
+	grid-column: 5/8;
+	/* Remove as content will dictate height */
+	height: 400px;
+	margin-bottom: 100px;
+}
+
+
+
+#footer-social {
+	grid-column: 10/-1;
+	/* Remove as content will dictate height */
+	height: 400px;
+}
+
+#web-creater {
+	grid-column: 5/9;
+	margin-left: 60px;
+	font-size: 16px;
+}
+
+
+
+
+#gallery-hero-con {
+	background-color: #aaaaaa;
+	background: url("https://via.placeholder.com/1920x580");
+	height: 805px;
+}
+
+#gallery-gift {
+	grid-column: 1/5;
+	/* Remove as content will dictate height */
+	height: 511px;
+	width: 611px;
+	margin-top: 100px;
+	opacity: 70%;
+}
+
+#gallery-controls {
+	/* margin-top: 200px; */
+	grid-column: 6/8;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.dot {
+	background-color: #dddddd;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	margin: 5px;
+	/* align-self: flex-end; */
+  }
+
