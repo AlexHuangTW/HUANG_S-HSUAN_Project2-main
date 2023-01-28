@@ -48,25 +48,23 @@ a {
 /*Common page elements  */
 
 /*This is essentially a box that we place the whole site in.  
-We center the box using margin 0 auto and give it a fixed width of 1920px.
-1920px would fit a large monitor or tv. Sizes will vary depending on the projects
-you work on and the intended audience */
+We center the box using margin 0 auto and give it a fixed width of 428px.
+428px would fit some phones. Sizes will vary depending on the projects
+you work on and the intended audience, we may go as low as 320px */
 
 #container {
 	margin: 0 auto;
-	width: 1920px;
+	width: 375px;
 }
 
 /* this is our grid based off of our XD file */
 .grid-con {
 	display: grid;
-	grid-template-columns: repeat(12, 122px);
+	grid-template-columns: repeat(4, 71px);
 	grid-column-gap: 16px;
-	padding-left: 140px;
-	padding-right: 140px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
-
-/* 1. header */
 
 #header-con-icon {
 	background-color: #ddd;
@@ -75,15 +73,13 @@ you work on and the intended audience */
 }
 
 #header-box1-media {
+	height: 50px;
 	grid-column: 1/3;
-	/* Remove as content will dictate height */
-	height: 80px;
 }
 
 #header-box2-cart {
-	grid-column: 11/-1;
-	/* Remove as content will dictate height */
-	height: 80px;
+	height: 50px;
+	grid-column: 3/-1;
 }
 
 #header-con {
@@ -92,70 +88,60 @@ you work on and the intended audience */
 	padding-bottom: 10px;
 }
 
-
-#main-nav {
-	grid-column: 2/6;
-	/* Remove as content will dictate height */
-	height: 80px;
-}
-
 #header-logo {
-	grid-column: 6/8;
-	/* Remove as content will dictate height */
-	height: 80px;
+	grid-column: 1/3;
 }
 
-#main-nav2 {
-	grid-column: 8/-1;
-	/* Remove as content will dictate height */
-	height: 80px;
+#mobile-nav {
+	grid-column: 4/-1;
 }
 
-/* Specific to index page desktop  */
-
-/* 2. banner */
-
-#gallery-hero-con {
-	background-color: #aaaaaa;
-	background: url("https://via.placeholder.com/1920x580");
-	height: 805px;
+.burger {
+	height: 16px;
+	background-color:#aaa;
+	display: block;
+	margin-bottom: 10px;
 }
 
-#gallery-gift {
-	grid-column: 1/5;
-	/* Remove as content will dictate height */
-	height: 511px;
-	width: 611px;
-	margin-top: 100px;
-	opacity: 70%;
-}
+/* index page */
 
-#gallery-controls {
-	/* margin-top: 200px; */
-	grid-column: 6/8;
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
-}
 
-.dot {
+#image-slider-con {
 	background-color: #dddddd;
-	height: 30px;
-	width: 30px;
-	border-radius: 50%;
-	margin: 5px;
-	/* align-self: flex-end; */
-  }
+	/* Remove as content will dictate height */
+	height: 640px;
+	position: relative;
+}
 
+#image-slider-con h2 {
+	background-color: #ffffff;
+	text-align: center;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	margin: 0;
+}
 
-/* 3. container below */
+#mobile-slider-left {
+	position: absolute;
+	left: 0;
+	font-size: 120px;
+	color:#fff;
+	top: 200px;
+}
 
+#mobile-slider-right {
+	position: absolute;
+	right: 0;
+	font-size: 120px;
+	color:#fff;
+	top: 200px;
+}
 
 #brew-products {
 	/* margin-top: 100px;
 	margin-bottom: 100px; */
 	background-color: #080808;
-	height: 496px;
+	height: 1570px;
 }
 
 #brew-products h2 {
@@ -166,33 +152,41 @@ you work on and the intended audience */
 #brew-product1 {
 	grid-column: 1/5;
 	/* Remove as content will dictate height */
-	height: 456px;
-	margin-left: -50px;
+	height: 300px;
 	margin-top: 20px;
+
 }
 
+
+
 #col-brew1 {
-	grid-column: 1/5;
+	grid-column: 1/4;
 	background-color: rgb(255, 255, 255);
 	height: 248px;
+
+	margin-right: -50px;
+
 }
 
 #col-brew2 {
-	grid-column: 5/9;
+	grid-column: 1/4;
 	background-color: #DDDDDD;
 	height: 248px;
+	margin-right: -50px;
 }
 
 #col-brew3 {
-	grid-column: 1/5;
+	grid-column: 1/4;
 	background-color: #DDDDDD;
 	height: 248px;
+	margin-right: -50px;
 }
 
 #col-brew4 {
-	grid-column: 5/9;
+	grid-column: 1/4;
 	background-color: rgb(255, 255, 255);
 	height: 248px;
+	margin-right: -50px;
 }
 
 .brew-product-box {
@@ -200,33 +194,38 @@ you work on and the intended audience */
 }
 
 #about-con {
-	background-color: #aaaaaa;
+	background-color: #dddddd;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	height: 715px;
 }
 
 #about-title {
 	text-align: center;
 }
 
+
+
 #about-img {
-	grid-column: 2/6;
+	grid-column: 1/4;
 	/* Remove as content will dictate height */
-	height: 379px;
-	width: 556px;
+	
+	
 }
 
 #about-text {
-	grid-column: 9/-1;
+	grid-column: 1/-1;
 	/* Remove as content will dictate height */
 	height: 379px;
-	background-color: #ddd;
+	background-color: #aaaaaa;
 	text-align: center;
+	margin-top: 50px;
+
 }
 
 #products {
 	background-color: #8f8c8c;
-	height: 900px;
+	height: 1777px;
 }
 
 #products h2 {
@@ -236,21 +235,24 @@ you work on and the intended audience */
 }
 
 #product1 {
-	grid-column: 1/5;
+	grid-column: 1/-1;
 	/* Remove as content will dictate height */
-	height: 694px;
+	height: 500px;
+	margin-top: 20px;
 }
 
 #product2 {
-	grid-column: 5/9;
+	grid-column: 1/-1;
 	/* Remove as content will dictate height */
-	height: 694px;
+	height: 500px;
+	margin-top: 20px;
 }
 
 #product3 {
-	grid-column: 9/-1;
+	grid-column: 1/-1;
 	/* Remove as content will dictate height */
-	height: 694px;
+	height: 500px;
+	margin-top: 20px;
 }
 
 .product-box {
@@ -258,8 +260,8 @@ you work on and the intended audience */
 }
 
 #blog {
-	background-color: #aaaaaa;
-	height: 900px;
+	background-color: #ffffff;
+	/* height: 900px; */
 }
 
 #blog h2 {
@@ -269,21 +271,23 @@ you work on and the intended audience */
 }
 
 #blog1 {
-	grid-column: 1/5;
+	grid-column: 1/-1;
 	/* Remove as content will dictate height */
 	height: 694px;
 }
 
 #blog2 {
-	grid-column: 5/9;
+	grid-column: 1/-1;
 	/* Remove as content will dictate height */
 	height: 694px;
+	margin-top: 40px;
 }
 
 #blog3 {
-	grid-column: 9/-1;
+	grid-column: 1/-1;
 	/* Remove as content will dictate height */
 	height: 694px;
+	margin-top: 40px;
 }
 
 .blog-box {
@@ -294,66 +298,64 @@ you work on and the intended audience */
 	background-color: #8c8c8c;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	height: 422.51px;
-	display: flex;
+	
+
 }
 
-#award-title {
-	text-align: center;
-}
+
+
+
 
 #award-col1 {
-	grid-column: 1/2;
+	grid-column: 1/-1;
 	/* Remove as content will dictate height */
 	height: 400px;
-	width: 361px;
+	margin-top: 20px;
 	align-self: center;
 }
 
 #award-col2 {
-	grid-column: 4/5;
+	grid-column: 1/-1;
 	/* Remove as content will dictate height */
 	height: 400px;
-	width: 361px;
+	margin-top: 20px;
 	align-self: center;
 }
 
 #award-col3 {
-	grid-column: 7/8;
+	grid-column: 1/-1;
 	/* Remove as content will dictate height */
 	height: 400px;
-	width: 361px;
+	margin-top: 20px;
 	align-self: center;
 }
 
 #award-col4 {
-	grid-column: 10/11;
+	grid-column: 1/-1;
 	/* Remove as content will dictate height */
 	height: 400px;
-	width: 361px;
+	margin-top: 20px;
 	align-self: center;
 }
 
-
 #media {
-	background-color: rgb(255, 255, 255);
+	background-color: #ffffff;
 }
 
 #map {
-	grid-column: 1/6;
+	grid-column: 1/-1;
 	/* Remove as content will dictate height */
-	height: 700px;
+	height: 300px;
 }
 
 #video {
-	grid-column: 6/-1;
+	grid-column: 1/-1;
 	/* Remove as content will dictate height */
-	height: 700px;
+	margin-top: 20px;
+	height: 350px;
 }
 
 /*Common page elements  */
-
-/* 4. footer */
 
 #footer-con {
 	background-color: #aaaaaa;
@@ -362,35 +364,65 @@ you work on and the intended audience */
 }
 
 #footer-logo {
-	grid-column: 6/8;
+	grid-column: 2/4;
 	height: 80px;
-	margin-bottom: 70px;
+	margin-bottom: 50px;
 }
 
 #footer-location {
-	grid-column: 1/4;
+	grid-column: 1/3;
 	/* Remove as content will dictate height */
-	height: 400px;
+	height: 142px;
 }
 
 #footer-useful-link {
-	grid-column: 5/8;
+	grid-column: 1/-1;
 	/* Remove as content will dictate height */
-	height: 400px;
-	margin-bottom: 100px;
+	height: 172px;
+	margin-bottom: 20px;
+	margin-top: 40px;
 }
 
 #footer-social {
-	grid-column: 10/-1;
+	grid-column: 3/-1;
 	/* Remove as content will dictate height */
-	height: 400px;
+	height: 142px;
 }
 
 #web-creater {
-	grid-column: 5/9;
+	grid-column: 1/-1;
 	margin-left: 60px;
-	font-size: 16px;
+	font-size: 13px;
 }
 
+/* gallery page */
 
+#hero-gallery-con {
+	background-color: #aaaaaa;
+	background: url("https://via.placeholder.com/375x458");
+	height: 458px;
+}
+
+#hero-gallery-text {
+	grid-column: 1/-1;
+	/* Remove as content will dictate height */
+	height: 350px;
+	margin-top: 20px;
+}
+
+#gallery-controls {
+	grid-column: 1/-1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.dot {
+	background-color: #dddddd;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	margin: 5px;
+  }
 
